@@ -11,10 +11,11 @@ const personajesSimpsons = [
     { nombre: "Martin", edad: 10, rol: "Compañero de clase" }
     ];
     /*
-    Ejercicio 1: Crear un array de objetos con información de personajes de Los Simpsons, cada
-objeto debe contener el nombre, la edad y el rol del personaje. Utilizar el método
-filter para obtener un nuevo array que contenga solamente los personajes
-menores de 18 años.
+Ejercicio 2: Sumar edades de los personajes
+Utilizar el método reduce para sumar las edades de todos los personajes del array
+creado en el Ejercicio 1. Mostrar el resultado en la consola.
     */
     const menores18Años = personajesSimpsons.filter(personaje => personaje.edad<18);
-    console.log(menores18Años);
+    //console.log(menores18Años);    
+    const sumaEdades = menores18Años.reduce((suma, menores18Años)=> suma + menores18Años.edad,0);
+    console.log(sumaEdades);
