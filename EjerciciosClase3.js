@@ -11,16 +11,24 @@ const personajesSimpsons = [
     { nombre: "Martin", edad: 10, rol: "Compañero de clase" }
     ];
     /*
-Ejercicio 4: Cambiar el rol de los personajes
-Utilizar el método map y destructuring para crear un nuevo array a partir del array
-del Ejercicio 1, en el cual el rol de los personajes menores de edad sea cambiado a
-"Estudiante". Mostrar el nuevo array en la consola.
+Ejercicio 5: Agregar personajes con spread
+Crear un nuevo array de objetos con más personajes de Los Simpsons. Utilizar el
+operador spread para combinar ambos arrays de personajes en un nuevo array.
+Mostrar el array resultante en la consola.
     */
-    const menores18Años = personajesSimpsons.filter(personaje => personaje.edad<18);
+    const masPersonajesSimpsons = [
+        { nombre: "Mr Burns", edad: 99, rol: "Jefe" },
+        { nombre: "Smithers", edad: 50, rol: "Lacayo del jefe" }       
+        ];
+
+    const todosPersonajes = [...personajesSimpsons, ...masPersonajesSimpsons];
+    console.log(todosPersonajes);
+
+    //const menores18Años = personajesSimpsons.filter(personaje => personaje.edad<18);
     //console.log(menores18Años);    
     //const sumaEdades = menores18Años.reduce((suma, menores18Años)=> suma + menores18Años.edad,0);
     //console.log(sumaEdades);
     //const nombresPersonajesMenores = menores18Años.map(menores18Años => menores18Años.nombre);
     //console.log(nombresPersonajesMenores);
-    const cambioRolPersonajes = menores18Años.map(({nombre, edad, rol}) => ({ nombre, edad, rol : "Estudiante" }));
-    console.log(cambioRolPersonajes);
+    //const cambioRolPersonajes = menores18Años.map(({nombre, edad, rol}) => ({ nombre, edad, rol : "Estudiante" }));
+    //console.log(cambioRolPersonajes);

@@ -47,7 +47,7 @@ sin map    menores18Años.forEach(personaje => personaje.rol = "Estudiante");
     const cambioRolPersonajes = menores18Años;
     console.log(cambioRolPersonajes);
 
-    ChatGPT:
+    ChatGPT: Me ayude con esto porque no me salia y no le encontraba la vuelta
        const nuevosPersonajes = personajesSimpsons.map(({nombre, edad, rol}) => {
         if (edad < 18) {
             rol = "Estudiante";
@@ -58,3 +58,15 @@ sin map    menores18Años.forEach(personaje => personaje.rol = "Estudiante");
     console.log(nuevosPersonajes);
 
     ----------------------------------------------------------------------------------------------
+    Ejercicio 5: Agregar personajes con spread
+Crear un nuevo array de objetos con más personajes de Los Simpsons. Utilizar el
+operador spread para combinar ambos arrays de personajes en un nuevo array.
+Mostrar el array resultante en la consola.
+
+    const masPersonajesSimpsons = [
+        { nombre: "Mr Burns", edad: 99, rol: "Jefe" },
+        { nombre: "Smithers", edad: 50, rol: "Lacayo del jefe" }       
+        ];
+
+    const todosPersonajes = [...personajesSimpsons, ...masPersonajesSimpsons];
+    console.log(todosPersonajes);
